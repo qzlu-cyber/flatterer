@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -13,9 +13,6 @@
   <meta itemprop="image" content="assets/images/logo.jpg">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="icon" type="image/png" href="assets/images/logo.jpg">
-  <link rel="icon" type="image/png" sizes="144x144" href="assets/images/logo.jpg">
-  <link rel="apple-touch-icon" type="image/png" href="assets/images/logo.jpg">
   <style>
     @font-face {
       font-family: 'MFShangYa';
@@ -36,41 +33,6 @@
       border-bottom-right-radius: 225px 15px;
       border-top-left-radius: 255px 15px;
       border-top-right-radius: 15px 225px
-    }
-
-    .border-2 {
-      border-bottom-left-radius: 185px 25px;
-      border-bottom-right-radius: 20px 205px;
-      border-top-left-radius: 125px 25px;
-      border-top-right-radius: 10px 205px
-    }
-
-    .border-3 {
-      border-bottom-left-radius: 225px 15px;
-      border-bottom-right-radius: 15px 255px;
-      border-top-left-radius: 15px 225px;
-      border-top-right-radius: 255px 15px
-    }
-
-    .border-4 {
-      border-bottom-left-radius: 25px 115px;
-      border-bottom-right-radius: 155px 25px;
-      border-top-left-radius: 15px 225px;
-      border-top-right-radius: 25px 150px
-    }
-
-    .border-5 {
-      border-bottom-left-radius: 20px 115px;
-      border-bottom-right-radius: 115px 20px;
-      border-top-left-radius: 250px 15px;
-      border-top-right-radius: 25px 80px
-    }
-
-    .border-6 {
-      border-bottom-left-radius: 15px 225px;
-      border-bottom-right-radius: 20px 205px;
-      border-top-left-radius: 28px 125px;
-      border-top-right-radius: 100px 30px
     }
 
     html,
@@ -190,8 +152,6 @@
       align-items: center;
       flex-shrink: 0;
       padding: 0 0 .5rem;
-      padding-bottom: calc(constant(safe-area-inset-bottom) + .5rem);
-      padding-bottom: calc(env(safe-area-inset-bottom) + .5rem);
       margin: .45rem 0 0;
     }
 
@@ -250,7 +210,7 @@
         max-width: 80%;
         border: 0 none;
         background-color: transparent;
-        border-radius: none;
+        border-radius: 0;
       }
 
       article {
@@ -290,12 +250,12 @@
   <script src="./assets/js/jquery.js"></script>
   <script>
     function getOS() {
-      var userAgent = window.navigator.userAgent,
-        platform = window.navigator.platform,
-        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-        os = null;
+      let userAgent = window.navigator.userAgent,
+              platform = window.navigator.platform,
+              macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+              windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+              iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+              os = null;
       if (macosPlatforms.indexOf(platform) !== -1) {
         os = 'Mac OS';
       } else if (iosPlatforms.indexOf(platform) !== -1) {
